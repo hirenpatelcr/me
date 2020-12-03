@@ -29,13 +29,40 @@
   </script>-->
 
   <link href="build/main.css" rel="stylesheet">
+  <style>
+    @media screen and (min-width: 425px){
 
+      .main-box-hd{
+        max-width: 360px;
+    position: relative;
+    height: 640px;
+    display: block;
+    margin: auto;
+  }
+    .main-box-hd::after{
+      content: '';
+    height: 800px;
+    width: 400px;
+    left: -18px;
+    background-size: cover;
+    position: absolute;
+    background-image: url(assets/imgs/nexus5.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  ion-app{
+    margin-top: 78px;
+    }
+  }
+  </style>
+  
 </head>
 <body>
 
   <!-- Ionic's root component and where the app will load -->
+  <div class="main-box-hd">
   <ion-app></ion-app>
-
+</div>
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 
